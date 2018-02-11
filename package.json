@@ -1,5 +1,5 @@
 {
-  "name": "my-novel",
+  "name": "new-pro",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -8,7 +8,6 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "register-service-worker": "^1.0.0",
     "vue": "^2.5.13",
     "vue-class-component": "^6.0.0",
     "vue-property-decorator": "^6.0.0",
@@ -17,7 +16,6 @@
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.0-alpha.11",
-    "@vue/cli-plugin-pwa": "^3.0.0-alpha.11",
     "@vue/cli-plugin-typescript": "^3.0.0-alpha.11",
     "@vue/cli-service": "^3.0.0-alpha.11",
     "node-sass": "^4.7.2",
