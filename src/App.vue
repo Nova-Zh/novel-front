@@ -1,32 +1,55 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <div class="tool-bar">
+      <div @click="linkBook">书架</div>
+      <div @click="findBook">找书</div>
     </div>
     <router-view/>
   </div>
 </template>
+<script lang="ts">
+  import { Component, Vue } from 'vue-property-decorator'
+  import HelloWorld from '@/components/HelloWorld.vue' // @ is an alias to /src
 
-<style>
+  @Component()
+  export default class Home extends Vue {
+    linkBook() {
+      this.$router.push('bookShelf')
+    }
+    findBook() {
+      this.$router.push('findBook')
+    }
+  }
+</script>
+<style lang="scss" scoped>
+html {
+  font-size: 20px;
+}
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: 'PingFang SC', Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: auto;
 }
-
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+.tool-bar {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2rem;
+  width: 100%;
+  display: flex;
+  background: #f1f1f1;
+  div {
+    width: 50%;
+    text-align: center;
+    line-height: 2rem;
+  }
 }
 </style>
